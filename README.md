@@ -1,0 +1,1 @@
+A blog app made with nodejs, express and mongodb

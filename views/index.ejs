@@ -1,0 +1,28 @@
+<div class="author">
+    <h1 class="author__heading">Hi, I am Paschal.</h1>
+    <p class="author__body">Software Engineer and Web Devloper.</p>
+  </div>
+  
+  <img src="/img/hero-image.webp" alt="person looking out through window" class="hero-image" width="981" height="528">
+  
+  <section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+    
+  
+    <ul class="article-ul">
+      <% data.forEach(blog  => { %>
+       
+        <li>
+          <a href="#">
+            <span><%= blog.title %></span>
+            <span class="article-list__date"><%= blog.createdAt.toDateString() %></span>
+          </a>
+        </li>
+        <% }) %>
+    </ul>
+  
+  
+      <a href="#" class="pagination">&lt; View Older Posts</a>
+  
+  
+  </section>
