@@ -15,4 +15,20 @@ router.get("", async (req, res) => {
   }
 });
 
+router.get("/blog/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const data = await Blog.findById({ _id: id });
+
+    const locals = {
+      title: data.title,
+      description: "A Nodejs Blog App built with Nodejs, Express and MongoDB",
+    };
+
+    res.render('blog', {locals, data})
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;

@@ -13,7 +13,7 @@
       <% data.forEach(blog  => { %>
        
         <li>
-          <a href="#">
+          <a href="/blog/<%= blog._id %>">
             <span><%= blog.title %></span>
             <span class="article-list__date"><%= blog.createdAt.toDateString() %></span>
           </a>
