@@ -7,7 +7,6 @@ const jwt = require("jsonwebtoken");
 const adminLayout = "../views/layouts/admin";
 const jwtSecret = process.env.JWT_SECRET;
 
-
 router.get("/admin", async (req, res) => {
   try {
     const locals = {
@@ -51,6 +50,7 @@ router.post("/login", async (req, res) => {
 router.post("/register", async (req, res) => {
   try {
     const { username, password } = req.body;
+    console.log(req.body);
     const hashedPassword = await bcrypt.hash(password, 10);
 
     try {
